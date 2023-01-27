@@ -1,0 +1,1 @@
+- git: {local-name: robotino2-ros2-node, uri: https://github.com/BrOleg5/robotino2-ros2-node, version: main}
