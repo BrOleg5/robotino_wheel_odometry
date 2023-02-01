@@ -24,13 +24,15 @@ find_package(robotino2 REQUIRED)
 add_library(wheel_odometry src/WheelOdometry.cpp)
 
 set_target_properties(wheel_odometry PROPERTIES
-                      VERSION ${PROJECT_VERSION}
-                      PUBLIC_HEADER "include/${PROJECT_NAME}/WheelOdometry.hpp"
-                      DEBUG_POSTFIX d)
+  VERSION ${PROJECT_VERSION}
+  PUBLIC_HEADER "include/${PROJECT_NAME}/WheelOdometry.hpp"
+  DEBUG_POSTFIX d
+)
 
 target_include_directories(wheel_odometry PUBLIC
-                           $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-                           $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR})
+  $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+  $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}
+)
 
 ament_target_dependencies(wheel_odometry rclcpp geometry_msgs tf2 tf2_ros nav_msgs sensor_msgs robotino2)
 

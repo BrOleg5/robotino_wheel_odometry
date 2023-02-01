@@ -1,5 +1,7 @@
-#ifndef WHEELODOMETRY_HPP
-#   define WHEELODOMETRY_HPP
+// Copyright 2023 BrOleg5
+
+#ifndef ROBOTINO_WHEEL_ODOMETRY__WHEELODOMETRY_HPP_
+#define ROBOTINO_WHEEL_ODOMETRY__WHEELODOMETRY_HPP_
 
 #include <string>
 #include <memory>
@@ -42,8 +44,8 @@ class WheelOdometry: public rclcpp::Node {
         std::array<float, 3> robot_speed;
 
         bool use_position;
-        
+
         builtin_interfaces::msg::Time prev_stamp;
 };
 
-#endif
+#endif  // ROBOTINO_WHEEL_ODOMETRY__WHEELODOMETRY_HPP_
